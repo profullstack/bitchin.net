@@ -28,9 +28,6 @@ struct Item {
 fn main() {
 	vdotenv.load()
 	mut app := App{}
-	app.port = os.getenv('PORT').int()
-	app.db = os.getenv('DB_FILE')
-	app.emails = os.getenv('EMAILS_FILE')
 
 	println('bitchin.net')
 	println(app.db)
@@ -39,6 +36,9 @@ fn main() {
 
 pub fn(mut app App) init_once() {
 		app.set_app_static_mappings()
+		app.port = os.getenv('PORT').int()
+		app.db = os.getenv('DB_FILE')
+		app.emails = os.getenv('EMAILS_FILE')
 }
 
 fn (mut app App) set_app_static_mappings() {
