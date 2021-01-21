@@ -1,0 +1,13 @@
+[{
+	"link": "https://manjaro.org",
+	"tags": ["linux", "os"],
+	"name": "manjaro"
+},{
+	"link": "https://nimiq.com",
+	"tags": ["wallet", "cryptos"],
+	"name": "nimiq"
+},{
+	"link": "https://vlang.io",
+	"tags": ["programming"],
+	"name": "v"
+}]
