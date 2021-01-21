@@ -37,6 +37,7 @@ fn main() {
 
 pub fn(mut app App) init_once() {
 		app.set_app_static_mappings()
+		eprintln(app.static_files)
 }
 
 fn (mut app App) set_app_static_mappings() {
