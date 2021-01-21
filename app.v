@@ -30,13 +30,13 @@ fn main() {
 	mut app := App{}
 	println('bitchin.net')
 	app.port = os.getenv('PORT').int()
+	app.db = os.getenv('DB_FILE')
+	app.emails = os.getenv('EMAILS_FILE')
 	vweb.run_app<App>(mut app, app.port)
 }
 
 pub fn(mut app App) init_once() {
 		app.set_app_static_mappings()
-		app.db = os.getenv('DB_FILE')
-		app.emails = os.getenv('EMAILS_FILE')
 }
 
 fn (mut app App) set_app_static_mappings() {
