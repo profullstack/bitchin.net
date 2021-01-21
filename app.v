@@ -55,7 +55,7 @@ pub fn (mut app App) unsubscribe() vweb.Result {
 	}
 
 	println(emails)
-	write_file(app.emails, emails.join('\n')) or { panic(err) }
+	os.write_file(app.emails, emails.join('\n')) or { panic(err) }
 
 	return app.json('{"status": "ok", "email": "$email"}')
 }
@@ -66,13 +66,14 @@ pub fn (mut app App) subscribe() vweb.Result {
 	emails << email
 	println(emails)
 
-	write_file(app.emails, emails.join('\n')) or { panic(err) }
+	os.write_file(app.emails, emails.join('\n')) or { panic(err) }
 
 	return app.json('{"status": "ok", "email": "$email"}')
 }
 
 pub fn (mut app App) index() vweb.Result {
 	text := os.read_file(app.db) or { panic(err) }
-	items := json.decode([]Item, text) or { panic(err) }
+	decoded_items := json.decode([]Item, text) or { panic(err) }
+	items := decoded_items.clone()
 	return $vweb.html()
 }

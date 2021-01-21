@@ -1,7 +1,19 @@
-<h1>bitchin</h1>
+<!doctype html>
+<html lang="en">
+<head>
+	<title>bitchin.net</title>
+</head>
+<body>
+<h1>bitchin.net</h1>
 
-<p>A list of bitchin&apos; things on the Internet.</p>
+<p>A list of bitchin&apos; things on the &apos;net.</p>
 
 @for item in items
+<div class="item">
 	<h2>@item.name</h2>
+	<a href="@item.link">@item.link</a>
+	<span class="tags">@item.tags.join(', ')</span>
+</div>
 @end
+</body>
+</html>

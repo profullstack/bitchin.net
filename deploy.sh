@@ -1,4 +1,4 @@
 #!/bin/sh
 
-#v app.v
+v app.v
 rsync -avzP --delete ./ profullstack:www/bitchin.net
