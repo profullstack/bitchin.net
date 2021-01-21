@@ -10,4 +10,8 @@
 	"link": "https://vlang.io",
 	"tags": ["programming"],
 	"name": "v"
+},{
+	"link": "https://gitlab.com",
+	"tags": ["programming", "git"],
+	"name": "gitlab"
 }]
