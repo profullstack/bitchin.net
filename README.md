@@ -12,6 +12,12 @@ You can see the running version at https://bitchin.net
 clone it.
 install v
 
+Install the modules:
+
+  v install vweb
+  v install zztkm.vdotenv
+  v install json
+
 for development run `v run app.v`
 
 To compile run `v app.v` then push `./app` to your server.
